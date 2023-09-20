@@ -1,7 +1,8 @@
-package generator.mapper;
+package com.lcc.ucbackend.mapper.mapper;
 
-import generator.domain.User;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.lcc.ucbackend.model.domain.User;
+
 
 /**
 * @author lcccccccc

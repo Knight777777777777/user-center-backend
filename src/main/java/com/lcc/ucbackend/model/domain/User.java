@@ -1,12 +1,10 @@
-package generator.domain;
+package com.lcc.ucbackend.model.domain;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableName;
+import com.baomidou.mybatisplus.annotation.*;
+import lombok.Data;
+
 import java.io.Serializable;
 import java.util.Date;
-import lombok.Data;
 
 /**
  * 用户
@@ -14,7 +12,7 @@ import lombok.Data;
  */
 @TableName(value ="user")
 @Data
-public class    User implements Serializable {
+public class User implements Serializable {
     /**
      * id
      */
@@ -74,11 +72,13 @@ public class    User implements Serializable {
     /**
      * 是否删除 0 1
      */
+    @TableLogic
     private Integer isDelete;
 
     /**
      * 用户角色 0-普通用户 1-管理员
      */
+
     private Integer userRole;
 
     @TableField(exist = false)
