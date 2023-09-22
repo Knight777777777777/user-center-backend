@@ -76,7 +76,7 @@ public class UserController {
         Object userObj = request.getSession().getAttribute(USER_LOGIN_STATE);
         User currentUser = (User) userObj;
         if (currentUser == null) {
-           throw new BusinessException(ErrorCode.NULL_ERROR,"当前用户为空");
+           throw new BusinessException(ErrorCode.NOT_LOGIN,"未登录");
         }
         long userId = currentUser.getId();
         //todo 检验用户是否合法
