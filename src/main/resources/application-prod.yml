@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://1.117.75.160:3306/lcc
+    username: lcc
+    password: 12345678
+  #session失效时间
+  session:
+    timeout: 86400
